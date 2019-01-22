@@ -1,0 +1,287 @@
+{{ define "main" }}
+
+<style>
+  .hero-section {
+    background-color: #fff;
+  }
+  .hero-title h1 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 70px;
+    font-weight: 100;
+    color: green;
+    position: relative;
+    margin-top: -145px;
+    padding-left: 40px;
+  }
+  .hero-background {
+    max-width: 1440px;
+    background-color: whitesmoke;
+    padding-top: 100px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  .grow {
+    background-color: green;
+    color: whitesmoke;
+    font-style: italic;
+  }
+  .start-button {
+    font-size: 20px;
+    width: 100%;
+    color: #fff;
+    background-color: black;
+  }
+  .start-button .hydrated {
+    font-size: 25px;
+    background-color: white;
+    color: green;
+    border-radius: 6em;
+    margin-left: 10px;
+    vertical-align: top;
+  }
+  .design-done-section {
+    display: none;
+  }
+  .planning-textarea {
+    display: none;
+  }
+  .bottom-form-notice {
+    font-size: 0px;
+    color: green;
+    font-weight: bold;
+  }
+  #project-planning {
+    background-color: #222;
+    color: #fff;
+    height: 0px;
+    font-size: 0px;
+    transition: .2s;
+  }
+  #project-planning input {
+    display: none;
+  }
+  #project-planning select {
+    display: none;
+  }
+  .project-planning-toggle {
+    height: 100% !important;
+    font-size: 22px !important;
+    transition: .2s;
+  }
+  .project-planning-toggle input {
+    display: inline-block !important;
+  }
+  .project-planning-toggle .planning-textarea {
+    display: inline-block !important;
+  }
+  .project-planning-toggle select {
+    display: inline-block !important;
+  }
+  .project-planning-toggle .design-done-section {
+    display: inline-block !important;
+  }
+  .project-planning-toggle .bottom-form-notice {
+    font-size: 12px;
+  }
+  .planning-input {
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+  }
+  .planning-textarea {
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    width: 70%;
+    height: 200px;
+  }
+  .planning-input-booleen {
+    font-family: 'Roboto Mono', monospace;
+    background-color: green;
+    color: transparent;
+    text-shadow: 0 0 0 #fff;
+    border-radius: 10px;
+    text-transform: capitalize;
+  }
+  .planning-input-booleen:hover {
+    cursor: pointer;
+  }
+  .planning-input-swapped {
+    background-color: #fff;
+    color: black;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+  .design-done-section {
+    background-color: green;
+    border-radius: 10px;
+  }
+  .home-page-scroll-tool {
+    background-color: ;
+  }
+  .fast-website-projects {
+    background-image: url("/pageimg/hourglass-hey.jpg");
+    background-size: 50%;
+    margin-left: 0px;
+    background-repeat: no-repeat;
+  }
+  .secure-website-projects {
+    background-image: url("/pageimg/key.jpg");
+    background-size: 50%;
+    margin-left: 0px;
+    background-repeat: no-repeat;
+  }
+  .fast-website-projects-box {
+    background-color: rgba(245,245,245,0.5);
+  }
+  .number-reason-to-go-with-us {
+    background-color: green;
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .client-requests-header {
+    font-size: 20px;
+    font-style: italic;
+    background-color: #fff;
+  }
+  .help-with-text {
+    line-height: 1.5;
+  }
+</style>
+
+<section id="plan-your-project">
+  <section id="hero-section">
+    <div class="container hero-background">
+      <div class="text-left hero-title">
+        <h1>Affordable Web Dev for <span class="grow">Maximum Growth!</span></h1>
+        <a href="#project-planning">
+        <button class="py-4 start-button" v-on:click="drawerToggle = !drawerToggle">Plan a project now<ion-icon name="arrow-dropright-circle"></ion-icon></button>
+        </a>
+      </div>
+    </div>
+  </section>
+  <form action="/thank-you" netlify-honeypot="field-for-coolguys" name="Quote Request Form" method="POST" netlify>
+  <input type="hidden" name="subject" value="New Quote Request!" />
+  <section id="project-planning" v-bind:class="{ 'project-planning-toggle' : drawerToggle }">
+    <div class="container py-8 text-center project-name-box">
+      <h1 class="text-center get-started-title">Okay. Let's get started.</h1>
+      <p class="text-center italic">What's the name of your project?</p>
+      <input v-model="projectName" class="mt-5 px-4 py-2 planning-input" type="text" name="Project-Name" placeholder="Put project name here...">
+    </div>
+    <hr>
+    <div class="container py-8 text-center project-specifics-box">
+      <h4 class="text-center">Great! Now, we have two important questions to answer..</h4>
+      <div class="flex mt-12">
+        <div class="w-1/3 p-4 mx-auto design-done-section">
+          <h5 class="italic">Is the project design complete?</h5>
+          <select name="is-design-finished" v-model="designisDone" class="mt-2 px-4 py-2 planning-input-swapped">
+              <option selected value="Not Sure">Not Sure</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+              <option value="It will be soon">It will be - quick nagging me already sheesh</option>
+          </select>
+        </div>
+        <input type="text" name="field-for-coolguys" style="display:none!important" />
+        <div class="w-1/3 p-4 mx-auto design-done-section">
+          <h5 class="italic">Are the design assets all packed up and ready to share?</h5>
+          <select name="are-design-assets-packaged" v-model="designisreadytoShare" class="mt-2 px-4 py-2 planning-input-swapped">
+              <option selected value="Not Sure">Not Sure</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+              <option value="They will be soon">I'm getting to that too - quit being so pushy</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="container py-8 text-center project-specifics-box">
+      <h4 class="text-center">My client needs..</h4>
+      <h6>Click or tap to change your answer here.</h6>
+      <div class="flex mt-12">
+        <div class="w-1/3 p-4 mx-auto design-done-section">
+          <h5 class="italic">A gallery they can upload photos to</h5>
+          <div v-on:click="clientneedsGallery = !clientneedsGallery">
+            <input name="client-needs-gallery" readonly v-model="clientneedsGallery" class="mt-2 px-4 py-2 text-center planning-input-booleen" type="text" placeholder="">
+          </div>
+        </div>
+        <div class="w-1/3 p-4 mx-auto design-done-section">
+          <h5 class="italic">An employee listing they can edit themselves</h5>
+          <div v-on:click="clientneedsstaffListing = !clientneedsstaffListing">
+            <input name="client-needs-staff-page" readonly v-model="clientneedsstaffListing" class="mt-2 px-4 py-2 text-center planning-input-booleen" type="text" placeholder="">
+          </div>
+        </div>
+      </div>
+      <div class="flex mt-12">
+        <div class="w-1/3 p-4 mx-auto design-done-section">
+          <h5 class="italic">A way to edit written content themselves</h5>
+          <div v-on:click="clientneedsEditor = !clientneedsEditor">
+            <input name="client-needs-editing-ability" readonly v-model="clientneedsEditor" class="mt-2 px-4 py-2 text-center planning-input-booleen" type="text" placeholder="">
+          </div>
+        </div>
+        <div class="w-1/3 p-4 mx-auto design-done-section">
+          <h5 class="italic">More than one form (i.e. custom forms)</h5>
+          <div v-on:click="clientneedscustomForms = !clientneedscustomForms">
+            <input name="client-needs-custom-forms" readonly v-model="clientneedscustomForms" class="mt-2 px-4 py-2 text-center planning-input-booleen" type="text" placeholder="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container py-8 text-center project-extras-box">
+      <h4 class="text-center">Oh wait.. there is that one other thing..</h4>
+      <h6>Use the box below for extra details about the project.</h6>
+      <textarea name="extra-details-about-project" v-model="projectExtra" class="w-80 mt-5 px-4 py-2 planning-textarea" type="text" placeholder="Put details about your project here.."></textarea>
+    </div>
+    <div class="container pt-4 pb-8 text-center project-quote-inquiry">
+      <input type="text" name="Email" placeholder="Your email goes here..">
+      <input type="submit" value="Get a Quote">
+      <div class="w-1/2 mx-auto">
+        <p class="pt-8 pb-12 bottom-form-notice">if you're waiting to get more information about a client, feel free to leave this page and come back. The information in the planning fields above will stick around until you clear your browser cache.</p>
+      </div>
+    </div>
+  </section>
+  </form>
+
+</section>
+
+<div class="container fast-website-projects">
+  <div class="w-3/4 mx-auto pt-16">
+    <h1 class="text-left client-requests-header">My Client is demanding things, help!</h1>
+  </div>
+  <div class="w-3/4 mx-auto mt-2 fast-website-projects-box">
+    <span class="number-reason-to-go-with-us">"I want my website to be fast."</span>
+    <p class="p-3 help-with-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    <p class="p-3 help-with-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+  </div>
+</div>
+
+<div class="container secure-website-projects">
+  <div class="w-3/4 mx-auto mt-2 fast-website-projects-box">
+    <span class="number-reason-to-go-with-us">"I want my website to be fast."</span>
+    <p class="p-3 help-with-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    <p class="p-3 help-with-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+  </div>
+</div>
+
+<div class="container fast-website-projects">
+  <div class="w-3/4 mx-auto mt-2 fast-website-projects-box">
+    <span class="number-reason-to-go-with-us">"I want my website to be fast."</span>
+    <p class="p-3 help-with-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    <p class="p-3 help-with-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+  </div>
+</div>
+
+<div class="container flex">
+  <div class="w-1/3">
+    <!-- <div id="drawing"></div> -->
+  </div>
+  <div class="container w-2/3">
+    <!-- <button class="py-4 start-button">Let's build, together.</button> -->
+  </div>
+</div>
+
+<div class="home-page-scroll-tool">
+</div>
+
+{{ end }}

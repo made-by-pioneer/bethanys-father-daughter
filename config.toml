@@ -1,0 +1,66 @@
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+theme = "site-theme"
+title = "Default Site Title"
+[menu]
+    [[menu.desktop]]
+    identifier = "services"
+    name       = "Services"
+    url        = "/services"
+    weight     = 1
+
+    [[menu.desktop]]
+    identifier = "examples"
+    name       = "Examples"
+    url        = "/examples"
+    weight     = 2
+
+    [[menu.desktop]]
+    identifier = "contact-us"
+    name       = "Contact Us"
+    url        = "/contact-us"
+    weight     = 3
+
+    [[menu.service]]
+    identifier = "this-service"
+    name       = ""
+    url        = "/services"
+    weight     = 1
+    pre        = "<img src='/pageimg/test.jpg' width='100%'>"
+
+    [[menu.service]]
+    identifier = "that-service"
+    name       = ""
+    url        = "/examples"
+    weight     = 2
+    pre        = "<img src='/pageimg/test.jpg' width='100%'>"
+
+    [[menu.service]]
+    identifier = "other-service"
+    name       = ""
+    url        = "/contact-us"
+    weight     = 3
+    pre        = "<img src='/pageimg/test.jpg' width='100%'>"
+
+    [[menu.mobile]]
+    identifier = "services"
+    name       = "Services"
+    url        = "/services"
+    weight     = 1
+
+    [[menu.mobile]]
+    identifier = "examples"
+    name       = "Examples"
+    url        = "/examples"
+    weight     = 2
+
+    [[menu.mobile]]
+    identifier = "contact-us"
+    name       = "Contact Us"
+    url        = "/contact-us"
+    weight     = 3
+
+[params]
+categories = ["",""]
+description = "Default description for your website goes here."
+email = "example@example.com"

@@ -1,0 +1,23 @@
+<style>
+  #elevator-button {
+    position: fixed;
+    font-size: 30px;
+    right: 5%;
+    bottom: 10%;
+    transition: .2s;
+  }
+  .hidegotoTop {
+    right: -100px !important;
+    transition: .2s;
+  }
+  #elevator-button:hover {
+    cursor: pointer;
+    padding-bottom: 5px;
+  }
+</style>
+
+<div id="go-to-top-button">
+  <div id="elevator-button" :class="{hidegotoTop: scrollPosition < 200, showgotoTop: scrollPosition > 500}">
+      <ion-icon name="arrow-dropup-circle"></ion-icon>
+  </div>
+</div>
