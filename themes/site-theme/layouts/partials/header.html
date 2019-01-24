@@ -6,6 +6,15 @@
   #header {
     background-color: transparent;
   }
+  #inner-page #header-functions {
+    background-color: #3E133E;
+  }
+  #inner-page #navigation-wrapper {
+    background-color: #782579;
+    right: -20px;
+    position: relative;
+    padding-right: 20px;
+  }
   .mobile-menu-list {
     list-style: none;
   }
@@ -197,8 +206,8 @@
 
 <div id="header-functions">
 
-<section id="header" :class="{nonstick: scrollPosition < 100, stick: scrollPosition > 500}" class="container header-container">
-        <div class="flex items-center h-32">
+<section id="header" :class="{nonstick: scrollPosition < 100, stick: scrollPosition > 500}" class="px-5 xl:container header-container">
+      <div class="flex items-center h-32">
 <a id="logo" class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 mx-auto" href="/">
     <img src="/pageimg/BFDDN.Logo.White.svg">
 </a>

@@ -1,0 +1,87 @@
+{{ define "main" }}
+
+<style>
+  .about-us-information-image {
+    background-image: url("/pageimg/TheGreens.jpg");
+    background-size: contain;
+    background-position-y: top;
+    background-position-x: center;
+    background-repeat: no-repeat;
+  }
+  #dedication-title-section {
+      background-color: #782579;
+  }
+  .bryn-dedication-flex {
+    flex-direction: column-reverse;
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 992px) {
+    .about-us-information-image {
+    background-size: cover;
+  }
+  .bryn-dedication-flex {
+    flex-direction: initial;
+  }
+  }
+  @media screen and (min-width: 1200px) {
+  }
+</style>
+
+<section id="about-us-information">
+  <div class="flex flex-wrap items-center">
+    <div class="w-3/4 lg:w-2/3 mx-auto py-16 lg:px-24">
+      <div class="">
+      <h2 class="text-4xl xxl:text-5xl pb-5 purple-heading">About us</h2>
+      <p class="pb-5">Bethany’s Father Daughter Date Night is an annual date night for Daddies and Daughters in honor of Sarah Bethany Green. Bethany’s parents, Boyd and Brooke Green with their daughter Bryn and a dedicated group of supporters have hosted this night since 2006.</p> 
+    <p class="pb-5">The first few dances from 2006 - 2011 raised money to help fund an addition to Ogeechee Area Hospice, appropriately named, “Bethany’s Place”.  Each year since, the money raised has been donated to families with children who have medical needs.  While each year is a different theme, every year is an opportunity for Daddies to sweep their little girls off their feet and dance the night away.</p>
+    </div>
+    </div>
+    <div class="w-full lg:w-1/3 text-center mx-auto about-us-information-image">
+      <div class="py-32"></div>
+      <div class="py-20"></div>
+    </div>
+  </div>
+</section>
+
+<section id="dedication-title-section">
+  <div class="flex">
+    <div class="w-2/3 lg:w-1/2 mx-auto py-8 lg:py-12">
+      <h2 class="text-4xl xxl:text-5xl text-center text-white">To Bethany, Love Daddy, Mama, and Bryn…</h2>
+    </div>
+  </div>
+</section>
+
+<section id="dad-mom-dedication-section">
+  <div class="flex flex-wrap pb-5 lg:py-0">
+    <div class="w-2/3 lg:w-1/3 lg:pl-24 text-left mx-auto">
+      <h2 class="text-5xl xxl:text-6xl py-12 lg:py-24 purple-heading">To Bethany, Love, Daddy and Mama</h2>
+    </div>
+    <div class="w-3/4 lg:w-2/3 mx-auto lg:py-24 lg:pr-32 mx-auto">
+      <div class="lg:px-12">
+      <p class="pb-5">Bethany’s Father Daughter Date Night is an annual date night for Daddies and Daughters in honor of Sarah Bethany Green. Bethany’s parents, Boyd and Brooke Green with their daughter Bryn and a dedicated group of supporters have hosted this night since 2006.</p>  
+      <p class="pb-5">The first few dances from 2006 - 2011 raised money to help fund an addition to Ogeechee Area Hospice, appropriately named, “Bethany’s Place”.  Each year since, the money raised has been donated to families with children who have medical needs.</p>  
+      <p class="pb-5">While each year is a different theme, every year is an opportunity for Daddies to sweep their little girls off their feet and dance the night away.</p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="bryn-dedication-section">
+  <div class="flex flex-wrap pb-24 bryn-dedication-flex">
+    <div class="w-3/4 lg:w-2/3 lg:px-24 text-left mx-auto">
+        <p class="pb-5">Bethany’s Father Daughter Date Night is an annual date night for Daddies and Daughters in honor of Sarah Bethany Green. Bethany’s parents, Boyd and Brooke Green with their daughter Bryn and a dedicated group of supporters have hosted this night since 2006.</p>  
+        <p class="pb-5">The first few dances from 2006 - 2011 raised money to help fund an addition to Ogeechee Area Hospice, appropriately named, “Bethany’s Place”.  Each year since, the money raised has been donated to families with children who have medical needs.</p>  
+        <p class="pb-5">While each year is a different theme, every year is an opportunity for Daddies to sweep their little girls off their feet and dance the night away.</p>
+    </div>
+    <div class="w-2/3 lg:w-1/3 mx-auto lg:pr-32 mx-auto">
+      <div class="">
+        <h2 class="text-5xl xxl:text-6xl pb-8 lg:pb-0 purple-heading">To Bethany, Love, Bryn</h2>
+    </div>
+    </div>
+  </div>
+</section>
+
+
+
+{{ end }}

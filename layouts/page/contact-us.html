@@ -1,0 +1,69 @@
+{{ define "main" }}
+
+<style>
+
+  .contact-us-image {
+    background-image: url("/pageimg/bethany-father-daugther-date.jpg");
+    background-size: cover;
+    background-position-y: top;
+    background-position-x: center;
+    background-repeat: no-repeat;
+  }
+
+  #contact-us-section input {
+      width: 95%;
+  }
+
+  #contact-us-section textarea {
+      width: 97%;
+      font-family: "freight-sans-pro",sans-serif;
+      font-weight: 600;
+      letter-spacing: .5px;
+      border-color: #e4e4e4;
+      border-width: 1px;
+      border-radius: 5px;
+      padding: 10px;
+      height: 150px;
+  }
+  
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 992px) {
+   
+  }
+  @media screen and (min-width: 1200px) {
+  }
+</style>
+
+<section id="contact-us-section">
+  <div class="flex flex-wrap items-center">
+    <div class="w-3/4 lg:w-2/3 mx-auto py-8 lg:px-24">
+      <div class="lg:px-12">
+      <h2 class="text-5xl xxl:text-6xl pb-5 purple-heading">Contact Us</h2>
+      <div class="flex flex-wrap">
+          <div class="w-1/2">
+            <label><p class="pb-2">Name</p></label>
+            <input type="text" placeholder="Text">
+          </div>
+          <div class="w-1/2">
+            <label><p class="pb-2">Email</p></label>
+            <input type="text" placeholder="Text">
+          </div>
+          <div class="w-full">
+            <label><p class="pt-5 pb-2">Message</p></label>
+            <textarea></textarea>
+          </div>
+          <div class="w-1/3 py-5 ml-auto">
+            <input type="Submit" value="Send">
+          </div>
+      </div>
+    </div>
+    </div>
+    <div class="w-full lg:w-1/3 text-center mx-auto contact-us-image">
+      <div class="py-32"></div>
+      <div class="lg:py-20"></div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
