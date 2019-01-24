@@ -1,104 +1,206 @@
 <style>
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto Mono', monospace;
-    font-weight: 100;
+  html {
+    max-width: 1440px;
+    margin: auto;
   }
-  p {
-    font-family: 'Montserrat', sans-serif;
-  }
-  button {
-    font-family: 'Montserrat', sans-serif;
-  }
-  #logo {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 18px;
-    color: green;
-    text-decoration: none;
-  }
-  #logo h1 {
-    font-weight: 900;
-  }
-  #mobile-menu-logo {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 18px;
-    color: white;
-    text-decoration: none;
-  }
-  .green {
-    background-color: whitesmoke;
-  }
-  .green-mobile {
-    background-color: green;
+  #header {
+    background-color: transparent;
   }
   .mobile-menu-list {
     list-style: none;
   }
+  .desktop-menu-item {
+    font-family: "freight-sans-pro",sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .purple-heading {
+    color: #782579;
+  }
+
   .close-menu {
     color: #fff;
   }
-  .mobile-menu-item a {
-    font-size: 25px;
-    text-decoration-style: dashed;
-    color: white;
-  }
-  .phone-mobile-menu {
-    border-style: dashed;
-    border-width: 5px;
-    border-color: white;
-  }
-  .phone-mobile-menu ion-icon {
+  .close-menu .hydrated {
     font-size: 30px;
-    color: white;
+    color: #fff;
+    background-color: transparent !important;
   }
-  .desktop-menu {
-    border-style: dashed;
-    border-width: 1px;
-    border-color: #dae1e7;
-    background-color: whitesmoke;
+  .mobile-menu-button .hydrated {
+    font-size: 40px;
+    color: #fff;
   }
-  .desktop-menu-item {
+  #logo img {
+    width: 180px;
+  }
+  #mobile-menu-logo img {
+    width: 180px;
+  }
+  .mobile-menu-list {
+    font-family:"freight-display-pro";
+  }
+  .mobile-menu-list a {
+    color: #fff;
+    font-size: 40px;
     text-decoration: none;
-    background-color: white;
-    color: green;
-    font-size: 22px;
-    font-family: 'IBM Plex Mono', monospace;
-    transition: .1s;
   }
-  .desktop-menu-item:hover {
-    font-weight: bold;
+  h1 {
+    font-family:"freight-display-pro";
+    font-size: 64px;
+    font-weight: 300;
+  }
+  h2 {
+    font-family:"freight-display-pro";
+    font-size: 44px;
+    font-weight: 300;
+  }
+  h3 {
+    font-family:"freight-display-pro";
+    font-size: 36px;
+    font-weight: 300;
+  }
+  h4 {
+    font-family:"freight-display-pro";
+    font-size: 24px;
+    font-weight: 300;
+  }
+  h5 {
+    font-family:"freight-display-pro";
+    font-size: 16px;
+    font-weight: 300;
+  }
+  h6 {
+    font-family: "freight-sans-pro",sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+  }
+  p {
+    font-family: "freight-sans-pro",sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  li {
+    font-family: "freight-sans-pro",sans-serif;
+  }
+  button {
+    background-color: #3E133E;
+    font-family: "freight-sans-pro",sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    color: #fff;
+    padding: 11px 28px 11px 28px;
+    border-radius: 5px;
     transition: .2s;
   }
-  .services-menu:hover ~ .desktop-mega-services {
-    opacity: 1;
-    height: 29%;
-    z-index: 999;
+  button:hover {
+    background-color: #2A0D2B;
+    cursor: pointer;
     transition: .2s;
   }
-  .desktop-mega-services {
-    background-color: white;
-    border-style: dashed;
-    border-top-style: none;
+  button:active {
+    background-color: #090303;
+  }
+  button:focus {
+    background-color: #2A0D2B;
+    outline: 0px;
+  }
+  .outline-button {
+    color: #3E133E;
+    border-color: #3E133E;
     border-width: 1px;
-    border-color: #dae1e7;
-    position: absolute;
-    opacity: 0;
-    height: 0px;
-    z-index: -999;
+    font-family: "freight-sans-pro",sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #fff;
+    padding: 11px 28px 11px 28px;
+    border-radius: 5px;
     transition: .2s;
   }
-  .desktop-mega-services:hover {
-    z-index: 999;
-    opacity: 1;
-    height: 29%;
+  .outline-button:hover {
+    color: #fff;
+    background-color: #3E133E;
+    cursor: pointer;
+    transition: .2s;
   }
+  .outline-button:active {
+    background-color: #090303;
+    color: #fff;
+  }
+  .outline-button:focus {
+    background-color: #2A0D2B;
+    outline: 0px;
+    color: #fff;
+  }
+  .secondary-button {
+    background-color: #7F2629;
+    font-family: "freight-sans-pro",sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    padding: 11px 28px 11px 28px;
+    border-radius: 5px;
+    transition: .2s;
+  }
+  .secondary-button:hover {
+    background-color: #441416;
+    cursor: pointer;
+    transition: .2s;
+  }
+  .secondary-button:active {
+    background-color: #090303;
+  }
+  .secondary-button:focus {
+    background-color: #441416;
+    outline: 0px;
+  }
+  .secondary-outline-button {
+    color: #7F2629;
+    border-color: #7F2629;
+    border-width: 1px;
+    font-family: "freight-sans-pro",sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #fff;
+    padding: 11px 28px 11px 28px;
+    border-radius: 5px;
+    transition: .2s;
+  }
+  .secondary-outline-button:hover {
+    color: #fff;
+    background-color: #7F2629;
+    cursor: pointer;
+    transition: .2s;
+  }
+  .secondary-outline-button:active {
+    background-color: #090303;
+    color: #fff;
+  }
+  .secondary-outline-button:focus {
+    background-color: #2A0D2B;
+    outline: 0px;
+    color: #fff;
+  }
+  input {
+    font-family: "freight-sans-pro",sans-serif;
+    font-weight: 600;
+    letter-spacing: .5px;
+    border-color: #e4e4e4;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
 </style>
 
 <div id="header-functions">
 
 <section id="header" :class="{nonstick: scrollPosition < 100, stick: scrollPosition > 500}" class="container header-container">
-        <div class="flex items-center px-5 h-32">
-<a id="logo" class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mx-auto" href="/">
-    <h1><span class="green">green</span>Zero</h1>
+        <div class="flex items-center h-32">
+<a id="logo" class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 mx-auto" href="/">
+    <img src="/pageimg/BFDDN.Logo.White.svg">
 </a>
 {{ partial "site-navigation.html" . }}
 
@@ -109,23 +211,16 @@
   <div class="container mobile-menu-container">
   <div class="flex items-center px-5 h-32">
   <a id="mobile-menu-logo" class="flex-1 text-left" href="/">
-    <h1><span class="green-mobile">green</span>Zero</h1>
+    <img src="/pageimg/BFDDN.Logo.White.svg">
   </a>
-  <a class="ml-auto w-10 text-center close-menu" v-on:click="menuToggle = !menuToggle">menu<ion-icon name="remove"></ion-icon></a>
+  <a class="ml-auto w-100 text-center close-menu" href="#"><button v-on:click="menuToggle = !menuToggle" class=""><ion-icon name="close"></ion-icon></button></a>
   </div>
-  <ul class="text-center p-0 pb-5 mobile-menu-list">
+  <ul class="text-left p-0 px-12 pb-5 mobile-menu-list">
     {{ $currentNode := . }}
     {{ range .Site.Menus.mobile }}
-    <li class="pt-2 pb-4 mobile-menu-item"><a class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL}}">{{ .Name }}</a></li>
+    <li class="pt-2 pb-2 mobile-menu-item"><a class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL}}">{{ .Name }}</a></li>
     {{ end }}
   </ul>
-  <a href="tel:+19124320772">
-    <div class="flex items-center py-5 mx-5 phone-mobile-menu">
-      <div class="flex-1 text-center">
-        <ion-icon name="call"></ion-icon>
-      </div>
-    </div>
-  </a>
 </div>
 </div>
 

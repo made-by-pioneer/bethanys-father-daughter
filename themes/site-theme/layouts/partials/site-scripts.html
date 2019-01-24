@@ -9,6 +9,7 @@ var siteFunctions = new Vue({
     el: '#header-functions',
     data: {
       menuToggle: false,
+      homereadMore: false,
       scrollPosition: null
     },
     methods: {
@@ -22,71 +23,11 @@ var siteFunctions = new Vue({
    },
 });
 
-var planningDrawer = new Vue({
-    el: '#plan-your-project',
+var readMore = new Vue({
+    el: '#past-year-winner',
     data: {
-      drawerToggle: false,
-      projectName: '',
-      designisDone: 'Not Sure',
-      designisreadytoShare: 'Not Sure',
-      clientneedsGallery: false,
-      clientneedsstaffListing: false,
-      clientneedsEditor: false,
-      clientneedscustomForms: false,
-      projectExtra: '',
+      homereadMore: false
     },
-    mounted() {
-    if (localStorage.projectName) {
-      this.projectName = localStorage.projectName;
-    }
-    if (localStorage.designisDone) {
-      this.designisDone = localStorage.designisDone;
-    }
-    if (localStorage.designisreadytoShare) {
-      this.designisreadytoShare = localStorage.designisreadytoShare;
-    }
-    if (localStorage.clientneedsGallery) {
-      this.clientneedsGallery = localStorage.clientneedsGallery;
-    }
-    if (localStorage.clientneedsstaffListing) {
-      this.clientneedsstaffListing = localStorage.clientneedsstaffListing;
-    }
-    if (localStorage.clientneedsEditor) {
-      this.clientneedsEditor = localStorage.clientneedsEditor;
-    }
-    if (localStorage.clientneedscustomForms) {
-      this.clientneedscustomForms = localStorage.clientneedscustomForms;
-    }
-    if (localStorage.projectExtra) {
-      this.projectExtra = localStorage.projectExtra;
-    }
-  },
-  watch: {
-    projectName(newprojectName) {
-      localStorage.projectName = newprojectName;
-    },
-    designisDone(newdesignisDone) {
-      localStorage.designisDone = newdesignisDone;
-    },
-    designisreadytoShare(newdesignisreadytoShare) {
-      localStorage.designisreadytoShare = newdesignisreadytoShare;
-    },
-    clientneedsGallery(newclientneedsGallery) {
-      localStorage.clientneedsGallery = newclientneedsGallery;
-    },
-    clientneedsstaffListing(newclientneedsstaffListing) {
-      localStorage.clientneedsstaffListing = newclientneedsstaffListing;
-    },
-    clientneedsEditor(newclientneedsEditor) {
-      localStorage.clientneedsEditor = newclientneedsEditor;
-    },
-    clientneedscustomForms(newclientneedscustomForms) {
-      localStorage.clientneedscustomForms = newclientneedscustomForms;
-    },
-    projectExtra(newprojectExtra) {
-      localStorage.projectExtra = newprojectExtra;
-    }
-  }
 });
 
 var footerFunctions = new Vue({

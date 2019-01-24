@@ -1,66 +1,45 @@
 baseURL = "https://bethany.netlify.com/"
 languageCode = "en-us"
 theme = "site-theme"
-title = "Default Site Title"
+title = "Bethany's Father Daughter Date Night"
 [menu]
     [[menu.desktop]]
-    identifier = "services"
-    name       = "Services"
-    url        = "/services"
+    identifier = "about"
+    name       = "About Us"
+    url        = "/about-us"
     weight     = 1
 
     [[menu.desktop]]
-    identifier = "examples"
-    name       = "Examples"
-    url        = "/examples"
+    identifier = "pastRecipients"
+    name       = "Past Recipients"
+    url        = "/past-recipients"
     weight     = 2
 
     [[menu.desktop]]
-    identifier = "contact-us"
+    identifier = "contactUs"
     name       = "Contact Us"
     url        = "/contact-us"
     weight     = 3
 
-    [[menu.service]]
-    identifier = "this-service"
-    name       = ""
-    url        = "/services"
-    weight     = 1
-    pre        = "<img src='/pageimg/test.jpg' width='100%'>"
-
-    [[menu.service]]
-    identifier = "that-service"
-    name       = ""
-    url        = "/examples"
-    weight     = 2
-    pre        = "<img src='/pageimg/test.jpg' width='100%'>"
-
-    [[menu.service]]
-    identifier = "other-service"
-    name       = ""
-    url        = "/contact-us"
-    weight     = 3
-    pre        = "<img src='/pageimg/test.jpg' width='100%'>"
-
     [[menu.mobile]]
-    identifier = "services"
-    name       = "Services"
-    url        = "/services"
+    identifier = "about"
+    name       = "About Us"
+    url        = "/about-us"
     weight     = 1
 
     [[menu.mobile]]
-    identifier = "examples"
-    name       = "Examples"
-    url        = "/examples"
+    identifier = "pastRecipients"
+    name       = "Past Recipients"
+    url        = "/past-recipients"
     weight     = 2
 
     [[menu.mobile]]
-    identifier = "contact-us"
+    identifier = "contactUs"
     name       = "Contact Us"
     url        = "/contact-us"
     weight     = 3
 
 [params]
 categories = ["",""]
-description = "Default description for your website goes here."
-email = "example@example.com"
+description = "An annual date night for Daddies and Daughters in honor of Sarah Bethany Green."
+email = "bethanysfatherdaughter@gmail.com"
