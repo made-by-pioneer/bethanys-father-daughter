@@ -3,12 +3,12 @@
 <div class="w-full text-right desktop-menu">
   {{ $currentNode := . }}
   {{ range .Site.Menus.desktop }}
-  <a class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}} inline-flex w-1/6 py-3 desktop-menu-item {{ lower .Name }}-menu" href="{{.URL}}"><span class="mx-auto">{{ .Name }}</span></a>
+  <a class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}} inline-flex px-4 py-3 desktop-menu-item {{ lower .Name }}-menu" href="{{.URL}}"><span class="ml-auto">{{ .Name }}</span></a>
   {{ end }}
 </div>
 
 <div id="mobile-menu" class="ml-auto">
-  <div class="mobile-menu-button ml-auto w-100">
+  <div class="mobile-menu-button ml-auto w-1/2">
     <a class="" href="#"><button v-on:click="menuToggle = !menuToggle" class=""><ion-icon name="menu"></ion-icon></button></a>
   </div>
 </div>

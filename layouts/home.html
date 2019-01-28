@@ -39,9 +39,10 @@
   }
   .past-winner-content-expanded {
     font-size: 0px;
+    transition: .2s;
   }
   .read-more-toggle {
-    font-size: 16px !important;
+    font-size: 20px !important;
     transition: .2s;
   }
   .hide-read-more {
@@ -54,12 +55,31 @@
     padding: 0px;
     font-weight: 400;
   }
+  .close-read-more {
+    font-family:"freight-display-pro";
+    background-color: transparent;
+    color: #782579;
+    padding: 0;
+    margin-top: 1.25rem;
+    font-weight: 400;
+    float: left;
+  }
   .testimonial-name {
     font-family:"freight-display-pro";
     opacity: .5;
     font-size: 24px;
   }
+
+  .desktop-break {
+    display: none;
+  }
   @media screen and (min-width: 768px) {
+    .desktop-break {
+    display: block;
+  }
+  .mobile-break {
+    display: none;
+  }
   }
   @media screen and (min-width: 992px) {
     #header-overlay-section {
@@ -83,7 +103,7 @@
   <div class="py-16 lg:py-20"></div>
   <div class="container flex header-overlay-box">
     <div class="w-3/4 mx-auto header-overlay-content">
-      <h1 class="text-3xl md:text-5xl lg:text-6xl text-white">A night you’ll always remember <br> and she’ll never forget.</h1>
+      <h1 class="text-5xl lg:text-6xl text-white">A night you’ll always remember <span class="desktop-break"><br></span><span class="mobile-break"><br></span> and <span class="mo she’ll never forget.</h1>
     </div>
   </div>
   <div class="py-8 lg:py-20"></div>
@@ -99,24 +119,24 @@
       <div class="w-3/4 md:w-1/2 py-16 lg:py-0 pl-0 md:pl-24 lg:pl-12 pr-0 xxl:pr-12 mx-auto md:ml-auto">
         <h2 class="text-4xl xxl:text-5xl purple-heading">Event details:</h2>
         <h4 class="pt-6">Friday, February 8</h4>
-        <p>6:00 - 7:30pm 5th grade and younger</p>
-        <p>8:00 - 10:00pm 6th grade and older</p>
+        <p class="small-p">6:00 - 7:30pm 5th grade and younger</p>
+        <p class="small-p">8:00 - 10:00pm 6th grade and older</p>
         <h4 class="pt-4">Saturday, February 9</h4>
-        <p>5:00 - 6:30pm 5th grade and younger</p>
-        <p>7:30 - 9:00pm 5th grade and younger</p>
+        <p class="small-p">5:00 - 6:30pm 5th grade and younger</p>
+        <p class="small-p">7:30 - 9:00pm 5th grade and younger</p>
         <h4 class="pt-4">The Belle House</h4>
-        <p>380 Westside Road</p>
-        <p>Statesboro, Ga. 30458</p>
+        <p class="small-p">380 Westside Road</p>
+        <p class="small-p">Statesboro, Ga. 30458</p>
       </div>
       <div class="w-3/4 md:w-1/2 py-16 lg:py-0 md:px-12 mx-auto md:mr-auto">
         <h2 class="text-4xl xxl:text-5xl purple-heading">Tickets include:</h2>
         <ul class="pt-6 px-0 tickets-include-list">
-          <li class="pb-2">- DJ & dancing</li>
-          <li class="pb-2">- Finger foods for the younger girls</li>
-          <li class="pb-2">- Seated dinner for the older girls</li>
-          <li class="pb-2">- T-shirt for the daughters</li>
-          <li class="pb-2">- $5 corsage coupon for The Flowergirl</li>
-          <li class="pb-2">- 5 x 7” keepsake picture</li>
+          <li class="pb-2 small-p">- DJ & dancing</li>
+          <li class="pb-2 small-p">- Finger foods for the younger girls</li>
+          <li class="pb-2 small-p">- Seated dinner for the older girls</li>
+          <li class="pb-2 small-p">- T-shirt for the daughters</li>
+          <li class="pb-2 small-p">- $5 corsage coupon for The Flowergirl</li>
+          <li class="pb-2 small-p">- 5 x 7” keepsake picture</li>
         </ul>
       </div>
     </div>
@@ -128,7 +148,7 @@
     <div class="w-3/4 lg:w-2/3 mx-auto py-16 lg:px-32">
       <div class="lg:px-12">
       <h2 class="text-4xl xxl:text-5xl pb-5 purple-heading">Ella Web - Our 2019 Honoree</h2>
-      <p class="pb-5">Ella Webb is a 10 year old little girl who was born with a “click in her hip”. Although, Ella had many other unknown complications, that was the first thing her pediatrician noticed when she was born. At Ella’s six month check-up, she was diagnosed with severe torticollis, and began physical therapy twice a week. At nine months old, Ella had her first seizure, and had over thirty more by the age of 4.. That was the beginning of Ella’s story. Her parents and doctors soon realized that Ella had significant developmental delays, feeding issues, and lots of respiratory problems. With every specialist appointment, her parents were told of new problems and concerns about their always-happy baby.</p> <button class="read-more" v-on:click="homereadMore = !homereadMore" v-bind:class="{ 'hide-read-more' : homereadMore }">Read More</button><p class="past-winner-content-expanded" v-bind:class="{ 'read-more-toggle' : homereadMore }">After hearing the word “syndrome” yet another time, it was decided that Ella would have genetic testing.  Ella was diagnosed with a severe gene deletion in chromosome 9P, which led to her having two muscular syndromes, Nemaline Myopathy and Inclusion Body Myopathy. Since the ninth chromosome controls many of the body’s core muscles, including the muscles in her face, neck, and chest, Ella stayed sick with pneumonia, had severe speech delays, and lacked the strength to sit, stand, and walk. Because myopathies tend to be regressive, Ella’s parents were told that if she lived past the age of 3, she would most likely be in a wheelchair by age 10. Little information is known about Ella’s syndromes, and at the time of her genetic testing, there were only two other known cases of the exact same gene deletion in the world. One is a Chinese girl and the other is an Indian boy, making Ella the only known American child to have these two myopathies. Ella Grace Webb truly is a special girl!  Since there is no treatment or cure for such a rare diagnosis, Ella’s parents were told to be thankful for each day with her, and to give her as full a life as they could. They learned early on that with every setback, Ella was able to overcome because of the strength she had gained from all of the therapy she received. She has been in therapy every week since she was six months old. Those are the activities that Ella does to support her disabilities, but she is involved in other activities to support her interests. From a very early age, Ella loved water, so her parents put her in swimming lessons. Learning to swim gave Ella the opportunity to strengthen her core and improve coordination, which led to her ability to ride horses and take ballet. Ella began horseback riding lessons at age 4, and continues her Sunday lessons where she can now lope and gallop her horse without any assistance at all. Ella may have been born with severe muscle weakness, but God has given her talents that strengthen her muscles through swimming, horseback riding, and ballet. She loves to dance in a special needs class at Statesboro School of Dance each week. Ella Grace Webb is a special girl who brings a smile and hug to everyone she meets. She continues to grow and learn new things each day, and her family is so blessed to see her continued progress and watch her grow.</p>
+      <p class="pb-5">Ella Webb is a 10 year old little girl who was born with a “click in her hip”. Although, Ella had many other unknown complications, that was the first thing her pediatrician noticed when she was born. At Ella’s six month check-up, she was diagnosed with severe torticollis, and began physical therapy twice a week. At nine months old, Ella had her first seizure, and had over thirty more by the age of 4.. That was the beginning of Ella’s story. Her parents and doctors soon realized that Ella had significant developmental delays, feeding issues, and lots of respiratory problems. With every specialist appointment, her parents were told of new problems and concerns about their always-happy baby.</p> <button class="read-more" v-on:click="homereadMore = !homereadMore; closereadMore = !closereadMore" v-bind:class="{ 'hide-read-more' : homereadMore}">Read More</button><p class="past-winner-content-expanded" v-bind:class="{ 'read-more-toggle' : homereadMore }">After hearing the word “syndrome” yet another time, it was decided that Ella would have genetic testing.  Ella was diagnosed with a severe gene deletion in chromosome 9P, which led to her having two muscular syndromes, Nemaline Myopathy and Inclusion Body Myopathy. Since the ninth chromosome controls many of the body’s core muscles, including the muscles in her face, neck, and chest, Ella stayed sick with pneumonia, had severe speech delays, and lacked the strength to sit, stand, and walk. Because myopathies tend to be regressive, Ella’s parents were told that if she lived past the age of 3, she would most likely be in a wheelchair by age 10. Little information is known about Ella’s syndromes, and at the time of her genetic testing, there were only two other known cases of the exact same gene deletion in the world. One is a Chinese girl and the other is an Indian boy, making Ella the only known American child to have these two myopathies. Ella Grace Webb truly is a special girl!  Since there is no treatment or cure for such a rare diagnosis, Ella’s parents were told to be thankful for each day with her, and to give her as full a life as they could. They learned early on that with every setback, Ella was able to overcome because of the strength she had gained from all of the therapy she received. She has been in therapy every week since she was six months old. Those are the activities that Ella does to support her disabilities, but she is involved in other activities to support her interests. From a very early age, Ella loved water, so her parents put her in swimming lessons. Learning to swim gave Ella the opportunity to strengthen her core and improve coordination, which led to her ability to ride horses and take ballet. Ella began horseback riding lessons at age 4, and continues her Sunday lessons where she can now lope and gallop her horse without any assistance at all. Ella may have been born with severe muscle weakness, but God has given her talents that strengthen her muscles through swimming, horseback riding, and ballet. She loves to dance in a special needs class at Statesboro School of Dance each week. Ella Grace Webb is a special girl who brings a smile and hug to everyone she meets. She continues to grow and learn new things each day, and her family is so blessed to see her continued progress and watch her grow.<br><a href="#past-year-winner"><button class="close-read-more" v-on:click="homereadMore = !homereadMore; closereadMore = !closereadMore" v-bind:class="{ 'hide-read-more' : closereadMore }">Close</button></a></p>
     </div>
     </div>
     <div class="w-full lg:w-1/3 text-center mx-auto past-year-winner-image">

@@ -13,7 +13,10 @@
     background-color: #782579;
     right: -20px;
     position: relative;
-    padding-right: 20px;
+    padding-right: 73px;
+  }
+  #navigation-wrapper {
+    padding-right: 53.3333px;
   }
   .mobile-menu-list {
     list-style: none;
@@ -25,6 +28,27 @@
     text-decoration: none;
   }
 
+  .desktop-menu-item span:hover {
+    color: #cccccc;
+    border-bottom-width: 1px;
+    border-color: #782579;
+    padding-top: 3px;
+    padding-bottom: 2px;
+  }
+
+  #inner-page .desktop-menu-item span:hover {
+    border-bottom-width: 1px;
+    color: #fff;
+    border-color: #fff;
+    padding-top: 3px;
+    padding-bottom: 2px;
+  }
+
+  #footer .desktop-menu-item span:hover {
+    border-width: 0px;
+    padding: 0px;
+    color: #cccccc;
+  }
   .purple-heading {
     color: #782579;
   }
@@ -38,19 +62,22 @@
     background-color: transparent !important;
   }
   .mobile-menu-button .hydrated {
-    font-size: 40px;
+    font-size: 30px;
     color: #fff;
   }
   #logo img {
+    min-width: 130px;
     width: 180px;
   }
   #mobile-menu-logo img {
+    min-width: 130px;
     width: 180px;
   }
   .mobile-menu-list {
     font-family:"freight-display-pro";
   }
   .mobile-menu-list a {
+    font-family:"freight-display-pro";
     color: #fff;
     font-size: 40px;
     text-decoration: none;
@@ -85,11 +112,21 @@
     font-size: 10px;
     font-weight: 300;
   }
+
   p {
+    font-family: "freight-sans-pro",sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  .small-p {
     font-family: "freight-sans-pro",sans-serif;
     font-size: 16px;
     font-weight: 300;
+    line-height: 1.5;
   }
+
   li {
     font-family: "freight-sans-pro",sans-serif;
   }
@@ -104,13 +141,22 @@
     border-radius: 5px;
     transition: .2s;
   }
+  .close-menu button {
+    background-color: #511952 !important;
+  }
   button:hover {
     background-color: #2A0D2B;
     cursor: pointer;
     transition: .2s;
   }
+  .close-menu button:hover {
+    background-color: #511952 !important;
+  }
   button:active {
     background-color: #090303;
+  }
+  .close-menu button:active {
+    background-color: #511952 !important;
   }
   button:focus {
     background-color: #2A0D2B;
@@ -206,7 +252,7 @@
 
 <div id="header-functions">
 
-<section id="header" :class="{nonstick: scrollPosition < 100, stick: scrollPosition > 500}" class="px-5 xl:container header-container">
+<section id="header" class="px-5 xl:container header-container">
       <div class="flex items-center h-32">
 <a id="logo" class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 mx-auto" href="/">
     <img src="/pageimg/BFDDN.Logo.White.svg">
@@ -217,14 +263,14 @@
 </section>
 
 <div class="mobile-menu" v-bind:class="{ 'mobile-menu-toggle' : menuToggle }">
-  <div class="container mobile-menu-container">
-  <div class="flex items-center px-5 h-32">
-  <a id="mobile-menu-logo" class="flex-1 text-left" href="/">
+  <div class="px-5 xl:container header-container">
+  <div class="flex items-center h-32">
+  <a id="mobile-menu-logo" class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 mr-auto" href="/">
     <img src="/pageimg/BFDDN.Logo.White.svg">
   </a>
-  <a class="ml-auto w-100 text-center close-menu" href="#"><button v-on:click="menuToggle = !menuToggle" class=""><ion-icon name="close"></ion-icon></button></a>
+  <a class="ml-auto w-1/2 text-right pr-2 close-menu" href="#"><button v-on:click="menuToggle = !menuToggle" class=""><ion-icon name="close"></ion-icon></button></a>
   </div>
-  <ul class="text-left p-0 px-12 pb-5 mobile-menu-list">
+  <ul class="container text-left p-0 px-12 pb-5 mobile-menu-list">
     {{ $currentNode := . }}
     {{ range .Site.Menus.mobile }}
     <li class="pt-2 pb-2 mobile-menu-item"><a class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL}}">{{ .Name }}</a></li>

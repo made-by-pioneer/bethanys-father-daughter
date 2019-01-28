@@ -9,7 +9,6 @@ var siteFunctions = new Vue({
     el: '#header-functions',
     data: {
       menuToggle: false,
-      homereadMore: false,
       scrollPosition: null
     },
     methods: {
@@ -26,50 +25,9 @@ var siteFunctions = new Vue({
 var readMore = new Vue({
     el: '#past-year-winner',
     data: {
-      homereadMore: false
+      homereadMore: false,
+      closereadMore: true
     },
 });
-
-var footerFunctions = new Vue({
-    el: '#go-to-top-button',
-    data: {
-      scrollPosition: null
-    },
-    methods: {
-     updateScroll() {
-       this.scrollPosition = window.scrollY
-     }
-   },
- 
-   mounted() {
-     window.addEventListener('scroll', this.updateScroll);
-   },
-});
-</script>
-
-{{ partial "js/elevator.min.js.html" . }}
-
-<script>
-window.onload = function() {
-      var elevator = new Elevator({
-        element: document.querySelector('#go-to-top-button'),
-        duration: 1000
-      });
-}
-</script>
-
-<script>
-
-var draw = SVG('drawing').size(500, 250)
-
-var image = draw.image('/pageimg/build-online-solutions.svg')
-image.size(300, 200).move(20, 20)
-
-// image.animate(700).rotate(15).size(280, 180).loop(1, true)
-
-// image.animate(1000).size(300, 200)
-// image.animate(500).skew(15, 0).after(function(situation) {
-//   this.load('/pageimg/test.jpg').size(1, 1).skew(0, 0).animate(10).size(300, 200).animate(0).style('opacity', '1')
-// })
 
 </script>
