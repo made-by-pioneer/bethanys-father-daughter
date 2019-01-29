@@ -8,6 +8,7 @@
     background-position-y: top;
     background-position-x: center;
     background-repeat: no-repeat;
+    display: none;
   }
 
   #contact-us-section input {
@@ -15,7 +16,7 @@
   }
 
   #contact-us-section textarea {
-      width: 97%;
+      width: 98%;
       font-family: "freight-sans-pro",sans-serif;
       font-weight: 600;
       letter-spacing: .5px;
@@ -29,6 +30,9 @@
   @media screen and (min-width: 768px) {
   }
   @media screen and (min-width: 992px) {
+    .contact-us-image {
+      display: inline-block;
+    }
    
   }
   @media screen and (min-width: 1200px) {
@@ -42,11 +46,11 @@
       <h2 class="text-5xl xxl:text-6xl pb-5 purple-heading">Contact Us</h2>
       <form action="/thank-you" netlify-honeypot="field-for-coolguys" name="contact-form" method="POST" netlify class="flex flex-wrap">
         <input type="hidden" name="subject" value="New submission!" />
-          <div class="w-1/2">
+          <div class="w-full lg:w-1/2">
             <label><p class="pb-2">Name</p></label>
             <input type="text" placeholder="Your Name" name="name" required>
           </div>
-          <div class="w-1/2">
+          <div class="w-full pt-5 lg:pt-0 lg:w-1/2">
             <label><p class="pb-2">Email</p></label>
             <input type="text" placeholder="Your Email" name="email" required>
           </div>
