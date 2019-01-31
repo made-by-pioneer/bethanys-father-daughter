@@ -9,7 +9,7 @@ sections:
   label: Pages
   create: all
   match: "**/*"
-- type: directory
+- type: document
   path: content/pages/past-recipients.md
   label: Past Recipients
   create: all
