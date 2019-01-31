@@ -2,7 +2,7 @@
 type: page
 layout: about
 title: About Us
-url: "/about-u"
+url: "/about-us"
 params: 
 page-status: inner-page
 
