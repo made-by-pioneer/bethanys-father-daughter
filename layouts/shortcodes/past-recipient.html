@@ -1,0 +1,24 @@
+<section id="past-recipient-{{ with .Get "year" }}{{.}}{{ end }}">
+  <div class="flex flex-wrap items-top swapped-image-flex">
+    <div class="w-3/4 md:w-2/3 mx-auto py-16 lg:px-24">
+      <div class="md:px-12">
+      <h2 class="text-4xl xxl:text-5xl pb-5 purple-heading">{{ with .Get "name" }}{{.}}{{ end }} - Our {{ with .Get "year" }}{{.}}{{ end }} Honoree</h2>
+      <p class="pb-5">{{ with .Get "before_read_more" }}{{.}}{{ end }}</p> <a href="#past-recipient-{{ with .Get "year" }}{{.}}{{ end }}" class="read-more-link"><button class="read-more" v-on:click="homereadMore = !homereadMore; closereadMore = !closereadMore" v-bind:class="{ 'hide-read-more' : homereadMore}">Read More</button><p class="past-winner-content-expanded" v-bind:class="{ 'read-more-toggle' : homereadMore }"></a>{{ with .Get "after_read_more" }}{{.}}{{ end }}<br><a href="#past-recipient-{{ with .Get "year" }}{{.}}{{ end }}" class="close-read-more-link"><button class="close-read-more" v-on:click="homereadMore = !homereadMore; closereadMore = !closereadMore" v-bind:class="{ 'hide-read-more' : closereadMore }">Close</button></a></p>
+    </div>
+    </div>
+    <div class="w-full md:w-1/3 text-center mx-auto past-recipient-image" style="background-image: url('{{ with .Get "recipient_image" }}{{.}}{{ end }}');background-position-y: top;background-position-x: center;background-repeat: no-repeat;max-height:500px;">
+      <div class="py-32"></div>
+      <div class="py-8"></div>
+      <div class="md:py-24"></div>
+    </div>
+  </div>
+  <script>
+  var readMore = new Vue({
+    el: '#past-recipient-{{ with .Get "year" }}{{.}}{{ end }}',
+    data: {
+      homereadMore: false,
+      closereadMore: true
+    },
+  });
+  </script>
+</section>
