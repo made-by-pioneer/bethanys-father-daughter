@@ -1,6 +1,6 @@
 +++
 homepage_hero_image = "https://res.cloudinary.com/pioneer-design/image/upload/v1575904760/Bethany%20Father%20Daughter/bethany-father-daugther-date_juhezu.jpg"
-homepage_title = "A night you’ll always remember\n\n\nand she’ll never forget."
+homepage_title = "A night you’ll always remember\nand she’ll never forget."
 layout = "home"
 page-status = "home-page"
 title = "Home"
