@@ -25,3 +25,5 @@ fields:
     name: image_swap_sides
     label: Image Swap Sides
     description: If this is ON, image will be on the right.
+pages:
+- themes/site-theme/data/past_recipiants.toml
