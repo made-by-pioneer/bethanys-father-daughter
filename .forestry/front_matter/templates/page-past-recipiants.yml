@@ -1,0 +1,32 @@
+---
+label: PAGE Past Recipiants
+hide_body: true
+fields:
+- type: text
+  name: type
+  label: type
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: title
+  label: title
+- type: text
+  name: url
+  label: url
+- type: text
+  name: page-status
+  label: page-status
+- type: field_group
+  name: bottom_section
+  label: bottom_section
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: textarea
+    name: text
+    label: text
+  - type: file
+    name: photo
+    label: photo
