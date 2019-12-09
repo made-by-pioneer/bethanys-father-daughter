@@ -17,10 +17,11 @@ fields:
     label: summary
   - type: textarea
     name: read_more
-    label: read_more
+    label: Read More
   - type: file
     name: photo
     label: photo
   - type: boolean
     name: image_swap_sides
-    label: image_swap_sides
+    label: Image Swap Sides
+    description: If this is ON, image will be on the right.
