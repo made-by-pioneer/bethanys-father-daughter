@@ -1,0 +1,26 @@
+---
+label: Past Recipiants
+hide_body: true
+fields:
+- type: field_group_list
+  name: recipiants
+  label: recipiants
+  fields:
+  - type: text
+    name: year
+    label: year
+  - type: text
+    name: title
+    label: title
+  - type: textarea
+    name: summary
+    label: summary
+  - type: textarea
+    name: read_more
+    label: read_more
+  - type: file
+    name: photo
+    label: photo
+  - type: boolean
+    name: image_swap_sides
+    label: image_swap_sides
