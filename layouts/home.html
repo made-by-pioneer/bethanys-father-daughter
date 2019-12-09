@@ -112,7 +112,7 @@
   <div class="py-16 lg:py-20"></div>
   <div class="container flex header-overlay-box">
     <div class="w-3/4 mx-auto header-overlay-content">
-      <h1 class="text-5xl lg:text-6xl text-white">A night you’ll always remember <div class="hidden md:inline"><br></div> and <div class="inline md:hidden"><br></div> she’ll never forget.</h1>
+      <h1 class="text-5xl lg:text-6xl text-white lg:whitespace-pre-line">{{ .Page.Params.homepage_title }}</h1>
     </div>
   </div>
   <div class="py-8 lg:py-20"></div>
@@ -126,16 +126,18 @@
     </div>
     <div class="flex flex-wrap w-full lg:w-2/3 xl:w-1/2 bethanys-information">
       <div class="w-3/4 md:w-1/2 py-16 lg:py-0 pl-0 md:pl-24 lg:pl-12 pr-0 xxl:pr-12 mx-auto md:ml-auto">
-        <h2 class="text-4xl xxl:text-5xl purple-heading">Event details:</h2>
-        <h4 class="pt-6">Friday, February 8</h4>
-        <p class="small-p">6:00 - 7:30pm 5th grade and younger</p>
-        <p class="small-p">8:00 - 10:00pm 6th grade and older</p>
-        <h4 class="pt-4">Saturday, February 9</h4>
-        <p class="small-p">5:00 - 6:30pm 5th grade and younger</p>
-        <p class="small-p">7:30 - 9:00pm 5th grade and younger</p>
-        <h4 class="pt-4">The Belle House</h4>
-        <p class="small-p">380 Westside Road</p>
-        <p class="small-p">Statesboro, Ga. 30458</p>
+        <h2 class="text-4xl xxl:text-5xl purple-heading">{{ .Page.Params.event_details.title }}</h2>
+        <h4 class="pt-6">{{ .Page.Params.event_details.first_day.date }}</h4>
+        {{ range .Page.Params.event_details.first_day.events }}
+        <p class="small-p">{{ . }}</p>
+        {{ end }}
+        <h4 class="pt-4">{{ .Page.Params.event_details.second_day.date }}</h4>
+        {{ range .Page.Params.event_details.second_day.events }}
+        <p class="small-p">{{ . }}</p>
+        {{ end }}
+        <h4 class="pt-4">{{ .Page.Params.event_details.location.building }}</h4>
+        <p class="small-p">{{ .Page.Params.event_details.location.street }}</p>
+        <p class="small-p">{{ .Page.Params.event_details.location.city }}, {{ .Page.Params.event_details.location.state }}. {{ .Page.Params.event_details.location.zip }}</p>
       </div>
       <div class="w-3/4 md:w-1/2 py-16 lg:py-0 md:px-12 mx-auto md:mr-auto">
         <h2 class="text-4xl xxl:text-5xl purple-heading">Tickets include:</h2>
