@@ -19,3 +19,5 @@ fields:
   - type: textarea
     name: facebook
     label: facebook
+pages:
+- themes/site-theme/data/global_data.toml
