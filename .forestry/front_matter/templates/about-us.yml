@@ -5,18 +5,23 @@ fields:
 - type: text
   name: type
   label: type
+  hidden: true
 - type: text
   name: layout
   label: layout
+  hidden: true
 - type: text
   name: title
   label: title
+  hidden: true
 - type: text
   name: url
   label: url
+  hidden: true
 - type: text
   name: page-status
   label: page-status
+  hidden: true
 - type: field_group
   name: about_us_section
   label: about_us_section
