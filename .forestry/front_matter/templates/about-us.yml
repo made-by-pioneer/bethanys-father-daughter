@@ -24,27 +24,30 @@ fields:
   hidden: true
 - type: field_group
   name: about_us_section
-  label: about_us_section
+  label: About Us Section
   fields:
   - type: text
     name: title
     label: title
   - type: list
     name: paragraph_text
-    label: paragraph_text
+    label: Paragraph Text
+    description: Each item in this list is a new paragraph.
   - type: file
     name: photo
     label: photo
+    description: CAUTION! Editing this photo can break the site's layout. If possible,
+      use the same dimensions as the original photo.
 - type: field_group
   name: pre_dedication
-  label: pre_dedication
+  label: Pre Dedication
   fields:
   - type: text
     name: text
     label: text
 - type: field_group
   name: first_dedication_section
-  label: first_dedication_section
+  label: First Dedication Section
   fields:
   - name: title
     type: textarea
@@ -57,16 +60,18 @@ fields:
     label: Title
   - type: list
     name: paragraph_text
-    label: paragraph_text
+    label: Paragraph Text
+    description: Each item in this list is a new paragraph.
 - type: field_group
   name: second_dedication_section
-  label: second_dedication_section
+  label: Second Dedication Section
   fields:
   - type: text
     name: title
     label: title
   - type: list
     name: paragraph_text
-    label: paragraph_text
+    label: Paragraph Text
+    description: Each item in this list is a new paragraph.
 pages:
 - content/pages/about.md
