@@ -34,3 +34,5 @@ fields:
     label: photo
     description: CAUTION! Editing this photo can break the site's layout. If possible,
       use the same dimensions as the original photo.
+pages:
+- content/pages/contact-us.md

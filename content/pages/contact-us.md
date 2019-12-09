@@ -1,10 +1,11 @@
 +++
-type = "page"
 layout = "contact-us"
-title = "Contact Us"
-url = "/contact-us"
 page-status = "inner-page"
-[contact_section]
 title = "Contact Us"
-photo = "/v1575904760/Bethany%20Father%20Daughter/bethany-father-daugther-date_juhezu.jpg"
+type = "page"
+url = "/contact-us"
+[contact_section]
+photo = "https://res.cloudinary.com/pioneer-design/image/upload/v1575904760/Bethany%20Father%20Daughter/bethanys-venue_yqegmu.jpg"
+title = "Contact Us"
+
 +++
