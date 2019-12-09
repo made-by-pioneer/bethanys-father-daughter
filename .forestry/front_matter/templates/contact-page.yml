@@ -1,0 +1,29 @@
+---
+label: Contact Page
+hide_body: true
+fields:
+- type: text
+  name: type
+  label: type
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: title
+  label: title
+- type: text
+  name: url
+  label: url
+- type: text
+  name: page-status
+  label: page-status
+- type: field_group
+  name: contact_section
+  label: contact_section
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: file
+    name: photo
+    label: photo
