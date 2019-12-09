@@ -42,11 +42,4 @@ title = "Bethany's Father Daughter Date Night"
 [params]
 categories = ["",""]
 description = "An annual date night for Daddies and Daughters in honor of Sarah Bethany Green."
-email = "bethanysfatherdaughter@gmail.com"
 cloudinary_url = "https://res.cloudinary.com/pioneer-design/image/upload"
-
-[params.Logos]
-logo = "/v1575904760/Bethany%20Father%20Daughter/BFDDN.Logo.White_jajjrl.svg"
-
-[params.social]
-facebook = "https://www.facebook.com/pages/category/Community-Organization/Bethanys-Father-Daughter-Date-Night-156944461181968/"
