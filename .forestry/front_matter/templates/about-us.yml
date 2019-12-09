@@ -1,0 +1,59 @@
+---
+label: About Us
+hide_body: true
+fields:
+- type: text
+  name: type
+  label: type
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: title
+  label: title
+- type: text
+  name: url
+  label: url
+- type: text
+  name: page-status
+  label: page-status
+- type: field_group
+  name: about_us_section
+  label: about_us_section
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: paragraph_text
+    label: paragraph_text
+  - type: file
+    name: photo
+    label: photo
+- type: field_group
+  name: pre_dedication
+  label: pre_dedication
+  fields:
+  - type: text
+    name: text
+    label: text
+- type: field_group
+  name: first_dedication_section
+  label: first_dedication_section
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: paragraph_text
+    label: paragraph_text
+- type: field_group
+  name: second_dedication_section
+  label: second_dedication_section
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: paragraph_text
+    label: paragraph_text
