@@ -17,7 +17,7 @@ sections:
   label: Pages
   create: all
   match: "*"
-upload_dir: "%2FBethany%20Father%20Daughter"
+upload_dir: Bethany Father Daughter
 public_path: ''
 front_matter_path: ''
 use_front_matter_path: false
