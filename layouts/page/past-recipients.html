@@ -64,7 +64,7 @@
   }
 </style>
 
-{{ range sort .Site.Data.past_recipiants "desc" }}
+{{ range .Site.Data.past_recipiants.recipiants }}
 
 <section id="past-recipient-{{ .year }}">
   <div class="flex flex-wrap items-top {{ if eq .image_swap_sides true }}swapped-image-flex{{ else }}{{ end }}">
