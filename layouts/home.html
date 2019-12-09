@@ -1,13 +1,6 @@
 {{ define "main" }}
 
 <style>
-  #header-overlay-section {
-    background-image: url("/pageimg/bethany-father-daugther-date.jpg");
-    background-size: cover;
-    background-position-x: right;
-    background-repeat: no-repeat;
-    background-color: #3E133E;
-  }
   #schedule-section {
     background-color: #fafafa;
   }
@@ -16,21 +9,6 @@
   }
   .schedule-flex-box {
     flex-direction: column-reverse;
-  }
-  .bethany-venue-image {
-    background-image: url("/pageimg/bethanys-venue.jpg");
-    background-size: contain;
-    background-position-y: top;
-    background-position-x: center;
-    background-repeat: no-repeat;
-    display: none;
-  }
-  .past-year-winner-image {
-    background-image: url("/pageimg/2019.TheWebbs.jpg");
-    background-size: contain;
-    background-position-y: top;
-    background-position-x: center;
-    background-repeat: no-repeat;
   }
   .tickets-include-list {
     list-style: none;
@@ -85,20 +63,20 @@
   }
   @media screen and (min-width: 992px) {
     #header-overlay-section {
-    background-size: 66.8%;
+    background-size: 66.8% !important;
   }
   .bethany-venue-image {
-    background-size: cover;
+    background-size: cover !important;
   }
   .schedule-flex-box {
     flex-direction: initial;
   }
   .past-year-winner-image {
-    background-size: 100%;
-    max-height: 800px;
+    background-size: 100% !important;
+    max-height: 800px !important;
   }
   .bethany-venue-image {
-    display: inline-block;
+    display: inline-block !important;
   }
   .swapped-image-flex {
     flex-direction: initial;
@@ -106,6 +84,16 @@
   }
   @media screen and (min-width: 1200px) {
   }
+</style>
+
+<style>
+#header-overlay-section {
+  background-image: url("{{ .Page.Params.homepage_hero_image }}");
+  background-size: cover;
+  background-position-x: right;
+  background-repeat: no-repeat;
+  background-color: #3E133E;
+}
 </style>
 
 <section id="header-overlay-section" class="-mt-32">
@@ -117,6 +105,17 @@
   </div>
   <div class="py-8 lg:py-20"></div>
 </section>
+
+<style>
+.bethany-venue-image {
+  background-image: url("{{ .Page.Params.event_details.venue_image }}");
+  background-size: contain;
+  background-position-y: top;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  display: none;
+}
+</style>
 
 <section id="schedule-section">
   <div class="flex flex-wrap items-center swapped-image-flex schedule-flex-box">
@@ -140,26 +139,33 @@
         <p class="small-p">{{ .Page.Params.event_details.location.city }}, {{ .Page.Params.event_details.location.state }}. {{ .Page.Params.event_details.location.zip }}</p>
       </div>
       <div class="w-3/4 md:w-1/2 py-16 lg:py-0 md:px-12 mx-auto md:mr-auto">
-        <h2 class="text-4xl xxl:text-5xl purple-heading">Tickets include:</h2>
+        <h2 class="text-4xl xxl:text-5xl purple-heading">{{ .Page.Params.included_with_tickets.title }}</h2>
         <ul class="pt-6 px-0 tickets-include-list">
-          <li class="pb-2 small-p">- DJ & dancing</li>
-          <li class="pb-2 small-p">- Finger foods for the younger girls</li>
-          <li class="pb-2 small-p">- Seated dinner for the older girls</li>
-          <li class="pb-2 small-p">- T-shirt for the daughters</li>
-          <li class="pb-2 small-p">- $5 corsage coupon for The Flowergirl</li>
-          <li class="pb-2 small-p">- 5 x 7” keepsake picture</li>
+          {{ range .Page.Params.included_with_tickets.items_included_with_ticket }}
+          <li class="pb-2 small-p">- {{ . }}</li>
+          {{ end }}
         </ul>
       </div>
     </div>
   </div>
 </section>
 
+<style>
+  .past-year-winner-image {
+    background-image: url("{{ .Page.Params.current_year_honoree.photo }}");
+    background-size: contain;
+    background-position-y: top;
+    background-position-x: center;
+    background-repeat: no-repeat;
+  }
+</style>
+
 <section id="past-year-winner">
   <div class="flex flex-wrap items-top swapped-image-flex">
     <div class="w-3/4 lg:w-2/3 mx-auto py-16 lg:px-32">
       <div class="lg:px-12">
-      <h2 class="text-4xl xxl:text-5xl pb-5 purple-heading">Ella Web - Our 2019 Honoree</h2>
-      <p class="pb-5">Ella Webb is a 10 year old little girl who was born with a “click in her hip”. Although, Ella had many other unknown complications, that was the first thing her pediatrician noticed when she was born. At Ella’s six month check-up, she was diagnosed with severe torticollis, and began physical therapy twice a week. At nine months old, Ella had her first seizure, and had over thirty more by the age of 4. That was the beginning of Ella’s story.</p> <a href="#past-year-winner" class="read-more-link"><button class="read-more" v-on:click="homereadMore = !homereadMore; closereadMore = !closereadMore" v-bind:class="{ 'hide-read-more' : homereadMore}">Read More</button><p class="past-winner-content-expanded" v-bind:class="{ 'read-more-toggle' : homereadMore }"></a>Her parents and doctors soon realized that Ella had significant developmental delays, feeding issues, and lots of respiratory problems. With every specialist appointment, her parents were told of new problems and concerns about their always-happy baby. After hearing the word “syndrome” yet another time, it was decided that Ella would have genetic testing.  Ella was diagnosed with a severe gene deletion in chromosome 9P, which led to her having two muscular syndromes, Nemaline Myopathy and Inclusion Body Myopathy. Since the ninth chromosome controls many of the body’s core muscles, including the muscles in her face, neck, and chest, Ella stayed sick with pneumonia, had severe speech delays, and lacked the strength to sit, stand, and walk. Because myopathies tend to be regressive, Ella’s parents were told that if she lived past the age of 3, she would most likely be in a wheelchair by age 10. Little information is known about Ella’s syndromes, and at the time of her genetic testing, there were only two other known cases of the exact same gene deletion in the world. One is a Chinese girl and the other is an Indian boy, making Ella the only known American child to have these two myopathies. Ella Grace Webb truly is a special girl!  Since there is no treatment or cure for such a rare diagnosis, Ella’s parents were told to be thankful for each day with her, and to give her as full a life as they could. They learned early on that with every setback, Ella was able to overcome because of the strength she had gained from all of the therapy she received. She has been in therapy every week since she was six months old. Those are the activities that Ella does to support her disabilities, but she is involved in other activities to support her interests. From a very early age, Ella loved water, so her parents put her in swimming lessons. Learning to swim gave Ella the opportunity to strengthen her core and improve coordination, which led to her ability to ride horses and take ballet. Ella began horseback riding lessons at age 4, and continues her Sunday lessons where she can now lope and gallop her horse without any assistance at all. Ella may have been born with severe muscle weakness, but God has given her talents that strengthen her muscles through swimming, horseback riding, and ballet. She loves to dance in a special needs class at Statesboro School of Dance each week. Ella Grace Webb is a special girl who brings a smile and hug to everyone she meets. She continues to grow and learn new things each day, and her family is so blessed to see her continued progress and watch her grow.<br><a href="#past-year-winner" class="close-read-more-link"><button class="close-read-more" v-on:click="homereadMore = !homereadMore; closereadMore = !closereadMore" v-bind:class="{ 'hide-read-more' : closereadMore }">Close</button></a></p>
+      <h2 class="text-4xl xxl:text-5xl pb-5 purple-heading">{{ .Page.Params.current_year_honoree.title }}</h2>
+      <p class="pb-5">{{ .Page.Params.current_year_honoree.summary }}</p> {{ if .Page.Params.current_year_honoree.read_more }} <a href="#past-year-winner" class="read-more-link"><button class="read-more" v-on:click="homereadMore = !homereadMore; closereadMore = !closereadMore" v-bind:class="{ 'hide-read-more' : homereadMore}">Read More</button><p class="past-winner-content-expanded" v-bind:class="{ 'read-more-toggle' : homereadMore }"></a>{{ .Page.Params.current_year_honoree.read_more }}<br><a href="#past-year-winner" class="close-read-more-link"><button class="close-read-more" v-on:click="homereadMore = !homereadMore; closereadMore = !closereadMore" v-bind:class="{ 'hide-read-more' : closereadMore }">Close</button></a>{{ else }}{{ end }}
     </div>
     </div>
     <div class="w-full lg:w-1/3 text-center mx-auto past-year-winner-image">
@@ -172,8 +178,8 @@
 <section id="testimonial-section">
   <div class="flex">
     <div class="w-2/3 lg:w-1/2 mx-auto py-16 lg:py-32">
-      <h3 class="text-3xl xxl:text-4xl pb-5 text-center text-white">“To get dressed up with our dad for one night and dance means more to me than anything. Seeing him on the dance floor having a great time is my favorite thing about the night.”</h3>
-      <p class="text-white text-center testimonial-name">Bryn Green</p>
+      <h3 class="text-3xl xxl:text-4xl pb-5 text-center text-white">"{{ .Page.Params.testimonial.text }}"</h3>
+      <p class="text-white text-center testimonial-name">{{ .Page.Params.testimonial.person }}</p>
     </div>
   </div>
 </section>
@@ -181,13 +187,13 @@
 <section id="brief-history">
   <div class="flex flex-wrap py-16 lg:py-0">
     <div class="w-3/4 lg:w-1/3 lg:pl-32 text-left mx-auto">
-      <h2 class="text-5xl xxl:text-6xl py-12 lg:py-24 lg:pl-12 purple-heading">A Brief <br>History</h2>
+      <h2 class="text-5xl xxl:text-6xl py-12 lg:py-24 lg:pl-12 purple-heading">{{ .Page.Params.history_section.title }}</h2>
     </div>
     <div class="w-3/4 lg:w-2/3 mx-auto lg:py-24 lg:pr-32 mx-auto">
       <div class="lg:px-12">
-      <p class="pb-5">Bethany’s Father Daughter Date Night is an annual date night for Daddies and Daughters in honor of Sarah Bethany Green. Bethany’s parents, Boyd and Brooke Green with their daughter Bryn and a dedicated group of supporters have hosted this night since 2006.</p>  
-      <p class="pb-5">The first few dances from 2006 - 2011 raised money to help fund an addition to Ogeechee Area Hospice, appropriately named, “Bethany’s Place”.  Each year since, the money raised has been donated to families with children who have medical needs.</p>  
-      <p class="pb-5">While each year is a different theme, every year is an opportunity for Daddies to sweep their little girls off their feet and dance the night away.</p>
+      {{ range .Page.Params.history_section.paragraph_text }}
+      <p class="pb-5">{{ . }}</p>
+      {{ end }}
     </div>
     </div>
   </div>
