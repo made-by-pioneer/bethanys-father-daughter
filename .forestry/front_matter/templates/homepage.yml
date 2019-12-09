@@ -22,9 +22,15 @@ fields:
   name: page-status
   label: page-status
   hidden: true
-- type: text
-  name: homepage_title
-  label: homepage_title
+- name: homepage_title
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Homepage Title
 - type: file
   name: homepage_hero_image
   label: homepage_hero_image
