@@ -46,6 +46,8 @@ fields:
   - type: file
     name: venue_image
     label: venue_image
+    description: CAUTION! Editing this photo can break the site's layout. If possible,
+      use the same dimensions as the original photo.
   - type: field_group
     name: first_day
     label: first_day
@@ -111,6 +113,8 @@ fields:
   - type: file
     name: photo
     label: photo
+    description: CAUTION! Editing this photo can break the site's layout. If possible,
+      use the same dimensions as the original photo.
 - type: field_group
   name: testimonial
   label: testimonial
@@ -125,9 +129,15 @@ fields:
   name: history_section
   label: history_section
   fields:
-  - type: text
-    name: title
-    label: title
+  - name: title
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: Title
   - type: list
     name: paragraph_text
     label: paragraph_text
