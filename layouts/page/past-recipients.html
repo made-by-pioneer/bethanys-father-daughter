@@ -106,11 +106,11 @@
   <div class="flex flex-wrap items-top swapped-image-flex">
     <div class="w-3/4 md:w-2/3 mx-auto py-16 lg:px-24">
       <div class="md:px-12">
-      <h2 class="text-4xl xxl:text-5xl pb-5 purple-heading">Bethany’s Place - 2006 - 2011</h2>
-      <p class="pb-5">All profits collected from 2006 to 2011 helped fund the recent addition of Bethany’s Place at Ogeechee Area Hospice. Bethany’s Place is a large conference-community room with restroom facilities and a serving kitchen. The space can accommodate activities for the more than 75 employees and 85 volunteers. Plans for the room also include educational sessions for the community, bereavement activities and other events associated with Hospice and palliative care.</p> 
+      <h2 class="text-4xl xxl:text-5xl pb-5 purple-heading">{{ .Page.Params.bottom_section.title }}</h2>
+      <p class="pb-5">{{ .Page.Params.bottom_section.text }}</p> 
     </div>
     </div>
-    <div class="w-full md:w-1/3 text-center mx-auto past-recipient-image" style="background-image: url('/pageimg/2006-2011.BethanysPlace.JPG');background-position-y: top;background-position-x: center;background-repeat: no-repeat;max-height:500px;">
+    <div class="w-full md:w-1/3 text-center mx-auto past-recipient-image" style="background-image: url('{{ .Site.Params.cloudinary_url }}{{ .Page.Params.bottom_section.photo }}');background-position-y: top;background-position-x: center;background-repeat: no-repeat;max-height:500px;">
       <div class="py-32"></div>
       <div class="md:py-32"></div>
     </div>
