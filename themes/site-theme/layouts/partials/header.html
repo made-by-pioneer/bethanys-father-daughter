@@ -279,7 +279,7 @@
 <section id="header" class="px-5 xl:container header-container">
       <div class="flex items-center h-32">
 <a id="logo" class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 mx-auto" href="/">
-    <img src="/pageimg/BFDDN.Logo.White.svg">
+    <img src="{{ .Site.Params.cloudinary_url }}{{ .Site.Params.logos.logo }}">
 </a>
 {{ partial "site-navigation.html" . }}
 
@@ -290,7 +290,7 @@
   <div class="px-5 xl:container header-container">
   <div class="flex items-center h-32">
   <a id="mobile-menu-logo" class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 mr-auto" href="/">
-    <img src="/pageimg/BFDDN.Logo.White.svg">
+    <img src="{{ .Site.Params.cloudinary_url }}{{ .Site.Params.logos.logo }}">
   </a>
   <a class="ml-auto w-1/2 text-right pr-2 close-menu" href="#"><button v-on:click="menuToggle = !menuToggle" class="px-2"><ion-icon name="close"></ion-icon></button></a>
   </div>
