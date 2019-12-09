@@ -1,0 +1,21 @@
+---
+label: Global Data
+hide_body: true
+fields:
+- type: field_group
+  name: logos
+  label: logos
+  fields:
+  - type: file
+    name: logo
+    label: logo
+- type: field_group
+  name: social
+  label: social
+  fields:
+  - type: text
+    name: email
+    label: email
+  - type: textarea
+    name: facebook
+    label: facebook
