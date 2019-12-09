@@ -5,18 +5,18 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
-  path: content/pages
-  label: Pages
+  path: content
+  label: Homepage
   create: all
-  match: "**/*"
+  match: "*"
 - type: document
   path: content/pages/past-recipients.md
   label: Past Recipients
 - type: directory
-  path: content
+  path: content/pages
   label: Pages
   create: all
-  match: "*"
+  match: "**/*"
 upload_dir: Bethany Father Daughter
 public_path: https://res.cloudinary.com/pioneer-design/image/upload
 front_matter_path: ''
