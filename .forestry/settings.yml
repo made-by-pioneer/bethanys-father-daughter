@@ -5,8 +5,9 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: document
-  path: config.toml
+  path: data/global_data.toml
   label: Site Data
+  match: "**/*"
 - type: directory
   path: content
   label: Homepage
