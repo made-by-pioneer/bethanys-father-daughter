@@ -33,101 +33,101 @@ fields:
   label: Homepage Title
 - type: file
   name: homepage_hero_image
-  label: homepage_hero_image
+  label: Homepage Hero Image
   description: CAUTION! Editing this photo can break the site's layout. If possible,
     use the same dimensions as the original photo.
 - type: field_group
   name: event_details
-  label: event_details
+  label: Event Details
   fields:
   - type: text
     name: title
-    label: title
+    label: Title
   - type: file
     name: venue_image
-    label: venue_image
+    label: Venue Image
     description: CAUTION! Editing this photo can break the site's layout. If possible,
       use the same dimensions as the original photo.
   - type: field_group
     name: first_day
-    label: first_day
+    label: First Day
     fields:
     - type: text
       name: date
-      label: date
+      label: Date
     - type: list
       name: events
-      label: events
+      label: Events
   - type: field_group
     name: second_day
-    label: second_day
     fields:
     - type: text
       name: date
-      label: date
+      label: Date
     - type: list
       name: events
-      label: events
+      label: Events
+    label: Second Day
   - type: field_group
     name: location
-    label: location
+    label: Location
     fields:
     - type: text
       name: building
-      label: building
+      label: Building
     - type: text
       name: street
-      label: street
+      label: Street
     - type: text
       name: city
-      label: city
+      label: City
     - type: text
       name: state
-      label: state
+      label: State
     - type: text
       name: zip
-      label: zip
+      label: Zip
 - type: field_group
   name: included_with_tickets
-  label: included_with_tickets
+  label: Included with Tickets
   fields:
   - type: text
     name: title
-    label: title
+    label: Title
   - type: list
     name: items_included_with_ticket
-    label: items_included_with_ticket
+    label: Items Included with Ticket
 - type: field_group
   name: current_year_honoree
-  label: current_year_honoree
+  label: Current Year Honoree
   fields:
   - type: text
     name: title
-    label: title
+    label: Title
   - type: textarea
     name: summary
-    label: summary
+    label: Summary
   - type: textarea
     name: read_more
-    label: read_more
+    label: Read More
   - type: file
     name: photo
-    label: photo
+    label: Photo
     description: CAUTION! Editing this photo can break the site's layout. If possible,
       use the same dimensions as the original photo.
 - type: field_group
   name: testimonial
-  label: testimonial
+  label: Testimonial
   fields:
   - type: textarea
     name: text
-    label: text
+    label: Text
   - type: text
     name: person
-    label: person
+    label: Person
 - type: field_group
   name: history_section
-  label: history_section
+  label: History Section
   fields:
   - name: title
     type: textarea
@@ -140,6 +140,7 @@ fields:
     label: Title
   - type: list
     name: paragraph_text
-    label: paragraph_text
+    label: Paragraph Text
+    description: Each item in this list is a new paragraph.
 pages:
 - content/_index.md
