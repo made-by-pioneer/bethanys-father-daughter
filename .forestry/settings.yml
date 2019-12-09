@@ -17,6 +17,7 @@ sections:
   label: Pages
   create: all
   match: "**/*"
+  exclude: thank-you.md
 upload_dir: Bethany Father Daughter
 public_path: ''
 front_matter_path: ''
