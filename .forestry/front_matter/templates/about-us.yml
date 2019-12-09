@@ -46,9 +46,15 @@ fields:
   name: first_dedication_section
   label: first_dedication_section
   fields:
-  - type: text
-    name: title
-    label: title
+  - name: title
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: Title
   - type: list
     name: paragraph_text
     label: paragraph_text
