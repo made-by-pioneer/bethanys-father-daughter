@@ -1,0 +1,120 @@
+---
+label: Homepage
+hide_body: true
+fields:
+- type: text
+  name: type
+  label: type
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: url
+  label: url
+- type: text
+  name: title
+  label: title
+- type: text
+  name: page-status
+  label: page-status
+- type: text
+  name: homepage_title
+  label: homepage_title
+- type: file
+  name: homepage_hero_image
+  label: homepage_hero_image
+- type: field_group
+  name: event_details
+  label: event_details
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: file
+    name: venue_image
+    label: venue_image
+  - type: field_group
+    name: first_day
+    label: first_day
+    fields:
+    - type: text
+      name: date
+      label: date
+    - type: list
+      name: events
+      label: events
+  - type: field_group
+    name: second_day
+    label: second_day
+    fields:
+    - type: text
+      name: date
+      label: date
+    - type: list
+      name: events
+      label: events
+  - type: field_group
+    name: location
+    label: location
+    fields:
+    - type: text
+      name: building
+      label: building
+    - type: text
+      name: street
+      label: street
+    - type: text
+      name: city
+      label: city
+    - type: text
+      name: state
+      label: state
+    - type: text
+      name: zip
+      label: zip
+- type: field_group
+  name: included_with_tickets
+  label: included_with_tickets
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: items_included_with_ticket
+    label: items_included_with_ticket
+- type: field_group
+  name: current_year_honoree
+  label: current_year_honoree
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: textarea
+    name: summary
+    label: summary
+  - type: textarea
+    name: read_more
+    label: read_more
+  - type: file
+    name: photo
+    label: photo
+- type: field_group
+  name: testimonial
+  label: testimonial
+  fields:
+  - type: textarea
+    name: text
+    label: text
+  - type: text
+    name: person
+    label: person
+- type: field_group
+  name: history_section
+  label: history_section
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: paragraph_text
+    label: paragraph_text
