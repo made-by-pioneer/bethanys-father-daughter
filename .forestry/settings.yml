@@ -17,8 +17,8 @@ sections:
   label: Pages
   create: all
   match: "*"
-upload_dir: ''
-public_path: https://res.cloudinary.com/pioneer-design/image/upload/v1575904760/Bethany%20Father%20Daughter
+upload_dir: Bethany%20Father%20Daughter
+public_path: https://res.cloudinary.com/pioneer-design/image/upload
 front_matter_path: ''
 use_front_matter_path: 
 file_template: ":filename:"
