@@ -10,7 +10,7 @@ sections:
   create: all
   match: "*"
 - type: document
-  path: content/pages/past-recipients.md
+  path: data/past_recipiants.md
   label: Past Recipients
 - type: directory
   path: content/pages
