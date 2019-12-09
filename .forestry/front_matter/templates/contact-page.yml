@@ -5,21 +5,26 @@ fields:
 - type: text
   name: type
   label: type
+  hidden: true
 - type: text
   name: layout
   label: layout
+  hidden: true
 - type: text
   name: title
   label: title
+  hidden: true
 - type: text
   name: url
   label: url
+  hidden: true
 - type: text
   name: page-status
   label: page-status
+  hidden: true
 - type: field_group
   name: contact_section
-  label: contact_section
+  label: Contact Section
   fields:
   - type: text
     name: title
@@ -27,3 +32,5 @@ fields:
   - type: file
     name: photo
     label: photo
+    description: CAUTION! Editing this photo can break the site's layout. If possible,
+      use the same dimensions as the original photo.
