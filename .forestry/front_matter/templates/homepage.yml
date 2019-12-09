@@ -34,6 +34,8 @@ fields:
 - type: file
   name: homepage_hero_image
   label: homepage_hero_image
+  description: CAUTION! Editing this photo can break the site's layout. If possible,
+    use the same dimensions as the original photo.
 - type: field_group
   name: event_details
   label: event_details
