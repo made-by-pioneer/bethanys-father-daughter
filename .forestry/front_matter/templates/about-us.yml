@@ -62,3 +62,5 @@ fields:
   - type: list
     name: paragraph_text
     label: paragraph_text
+pages:
+- content/pages/about.md
