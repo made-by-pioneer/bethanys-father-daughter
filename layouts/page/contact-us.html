@@ -2,15 +2,6 @@
 
 <style>
 
-  .contact-us-image {
-    background-image: url("/pageimg/bethany-father-daugther-date.jpg");
-    background-size: cover;
-    background-position-y: top;
-    background-position-x: center;
-    background-repeat: no-repeat;
-    display: none;
-  }
-
   #contact-us-section input {
       width: 95%;
   }
@@ -31,7 +22,7 @@
   }
   @media screen and (min-width: 992px) {
     .contact-us-image {
-      display: inline-block;
+      display: inline-block !important;
     }
    
   }
@@ -39,11 +30,22 @@
   }
 </style>
 
+<style>
+.contact-us-image {
+  background-image: url("{{ .Site.Params.cloudinary_url }}{{ .Page.Params.contact_section.photo }}");
+  background-size: cover;
+  background-position-y: top;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  display: none;
+}
+</style>
+
 <section id="contact-us-section">
   <div class="flex flex-wrap items-center">
     <div class="w-3/4 lg:w-2/3 mx-auto py-8 lg:px-24">
       <div class="lg:px-12">
-      <h2 class="text-5xl xxl:text-6xl pb-5 purple-heading">Contact Us</h2>
+      <h2 class="text-5xl xxl:text-6xl pb-5 purple-heading">{{ .Page.Params.contact_section.title }}</h2>
       <form action="/thank-you" netlify-honeypot="field-for-coolguys" name="contact-form" method="POST" netlify class="flex flex-wrap">
         <input type="hidden" name="subject" value="New submission!" />
           <div class="w-full lg:w-1/2">

@@ -88,7 +88,7 @@
 
 <style>
 #header-overlay-section {
-  background-image: url("{{ .Page.Params.homepage_hero_image }}");
+  background-image: url("{{ .Site.Params.cloudinary_url }}{{ .Page.Params.homepage_hero_image }}");
   background-size: cover;
   background-position-x: right;
   background-repeat: no-repeat;
@@ -108,7 +108,7 @@
 
 <style>
 .bethany-venue-image {
-  background-image: url("{{ .Page.Params.event_details.venue_image }}");
+  background-image: url("{{ .Site.Params.cloudinary_url }}{{ .Page.Params.event_details.venue_image }}");
   background-size: contain;
   background-position-y: top;
   background-position-x: center;
@@ -152,7 +152,7 @@
 
 <style>
   .past-year-winner-image {
-    background-image: url("{{ .Page.Params.current_year_honoree.photo }}");
+    background-image: url("{{ .Site.Params.cloudinary_url }}{{ .Page.Params.current_year_honoree.photo }}");
     background-size: contain;
     background-position-y: top;
     background-position-x: center;
