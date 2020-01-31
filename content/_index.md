@@ -15,7 +15,7 @@ title = "Ella Web - Our 2019 Honoree"
 title = "Event details:"
 venue_image = "/v1575904760/Bethany%20Father%20Daughter/bethanys-venue_yqegmu.jpg"
 [event_details.first_day]
-date = "Friday, February 8"
+date = "Friday, February 28"
 events = ["6:00 - 7:30pm 5th grade and younger", "8:00 - 10:00pm 6th grade and older"]
 [event_details.location]
 building = "The Belle House"
