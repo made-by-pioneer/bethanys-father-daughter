@@ -24,7 +24,7 @@ state = "GA"
 street = "380 Westside Road"
 zip = "30458"
 [event_details.second_day]
-date = "Saturday, February 9"
+date = "Saturday, February 29"
 events = ["5:00 - 6:30pm 5th grade and younger", "7:30 - 9:00pm 5th grade and younger"]
 [history_section]
 paragraph_text = ["Bethany’s Father Daughter Date Night is an annual date night for Daddies and Daughters in honor of Sarah Bethany Green. Bethany’s parents, Boyd and Brooke Green with their daughter Bryn and a dedicated group of supporters have hosted this night since 2006.", "The first few dances from 2006 - 2011 raised money to help fund an addition to Ogeechee Area Hospice, appropriately named, “Bethany’s Place”.  Each year since, the money raised has been donated to families with children who have medical needs.", "While each year is a different theme, every year is an opportunity for Daddies to sweep their little girls off their feet and dance the night away."]
