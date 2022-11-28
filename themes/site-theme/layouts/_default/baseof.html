@@ -77,11 +77,20 @@
     <link rel="stylesheet" href="https://use.typekit.net/abx5gun.css">
 
     <!-- END import custom adobe fonts -->
-
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WGFV6RM');</script>
+  <!-- End Google Tag Manager -->
   </head>
 
     <body id="{{ .Param "page-status" }}">
-
+      <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGFV6RM"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
     {{ block "header" . }}{{ partial "header.html" .}}{{ end }}
     <main role="main">
       {{ block "main" . }}{{ end }}
